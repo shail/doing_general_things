@@ -1,0 +1,13 @@
+<table class ="table table-bordered table-striped">
+	<tr>
+		<td>Sandwich Type</td>
+	</tr>
+<% if @sandwiches %>
+<% @sandwiches.each do |sandwich| %>
+	<tr>
+		<td><strong><%= sandwich.type %></strong></td>
+	</tr>
+<% end %>
+<% end %>
+
+<%= link_to "Make a Sandwich", new_sandwich_path, class: "btn btn-primary btn-large" %>
