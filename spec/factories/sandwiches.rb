@@ -4,4 +4,8 @@ FactoryGirl.define do
   factory :sandwich do
     type "Meaty"
   end
+
+  factory :invalid_sandwich, parent: :sandwich do 
+  	type nil
+  end
 end
