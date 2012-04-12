@@ -2,10 +2,10 @@
 
 FactoryGirl.define do
   factory :sandwich do
-    type "Meaty"
+    sandwich_type "Meaty"
   end
 
   factory :invalid_sandwich, parent: :sandwich do 
-  	type nil
+  	sandwich_type nil
   end
 end
