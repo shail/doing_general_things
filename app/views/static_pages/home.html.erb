@@ -1,8 +1,13 @@
 <h1 class="home" style="font-size:100px">Are you hungry?</h1>
 	<div class="row homepagetable">
  	<div class="span3 homerows">
- 		<h3>Already a member?</h3>
- 		<%= link_to "Sign in now!", new_user_session_path , class: "btn btn-large btn-success homesign" %>
+ 		<% if current_user %>
+ 			<h3>Sign out!</h3>
+ 			<%= link_to "Sign out", destroy_user_session_path, :method => :delete , class: "btn btn-large btn-success homesign" %>
+ 		<% else %>
+ 			<h3>Already a member?</h3>
+ 			<%= link_to "Sign in now!", new_user_session_path , class: "btn btn-large btn-success homesign" %>
+ 		<% end %>
  	</div>
 
  	<div class="span3" style="margin-right:-10px;">
