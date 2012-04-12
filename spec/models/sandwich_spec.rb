@@ -10,7 +10,7 @@ describe Sandwich do
 
   it "delivers text to user" do
   	sandwich = Factory(:sandwich)
-  	sandwich.send_text.should 
+  	sandwich.send_email.should 
   end
 
 end

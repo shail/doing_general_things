@@ -14,7 +14,11 @@ describe SandwichesController do
 
 	describe "POST #create" do
 		context "with valid attributes" do
-			it "saves the new sandwich in the database"
+			it "saves the new sandwich in the database" do
+				expect{
+					post :create, sandwich: Factory.attributes_for(:sandwich)
+				}.to change(Sandwich, :count).by(1)
+			end
 			it "redirects to the home page"
 		end
 
