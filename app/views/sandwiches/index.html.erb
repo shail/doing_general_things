@@ -1,13 +1,15 @@
 <table class ="table table-bordered table-striped">
 	<tr>
 		<td>Sandwich Type</td>
+		<td>Day Ordered</td>
 	</tr>
 <% if @sandwiches %>
-<% @sandwiches.each do |sandwich| %>
+<% current_user.sandwiches.each do |sandwich| %>
 	<tr>
-		<td><strong><%= sandwich.type %></strong></td>
+		<td><strong><%= sandwich.sandwich_type %></strong></td>
+		<td><strong><%= sandwich.created_at %></strong></td>
 	</tr>
 <% end %>
 <% end %>
-
-<%= link_to "Make a Sandwich", new_sandwich_path, class: "btn btn-primary btn-large" %>
+</table>
+<%= link_to "Make a Sandwich", new_sandwich_path, class: "btn btn-primary btn-large make-btn" %>

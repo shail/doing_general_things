@@ -10,4 +10,8 @@ describe "Sandwiches" do
   	page.should have_content("Your sandwich will arrive shortly")
   	last_email.to.should include('make_sandwich@generalthings.com')
   end
+
+  it "doesn't email me when their sandwich hasn't been made" do
+  	
+  end
 end

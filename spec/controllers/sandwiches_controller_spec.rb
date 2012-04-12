@@ -4,7 +4,7 @@ describe SandwichesController do
 	describe "GET #new" do
 		it "assigns a new Sandwich to @sandwich" do
 			get :new
-			assigns(:sandwich).type.should
+			assigns(:sandwich).sandwich_type.should
 		end
 		it "renders the :new template" do
 			get :new

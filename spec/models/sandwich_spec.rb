@@ -5,7 +5,7 @@ describe Sandwich do
   	FactoryGirl.create(:sandwich).should be_valid
   end
   it "is invalid without a sandwich type" do
-  	FactoryGirl.build(:sandwich, type: nil).should_not be_valid
+  	FactoryGirl.build(:sandwich, sandwich_type: nil).should_not be_valid
   end
 
   it "can send email to user" do

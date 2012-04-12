@@ -1,5 +1,5 @@
 class SandwichesController < ApplicationController
-	before_filter :authenticate_user!, :only => [:create, :index]
+	before_filter :authenticate_user!
 
 	def index
 		@sandwiches = current_user.sandwiches 
